@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#7C3AED">
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <title>Panel Admin - YahirCutz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid rgba(248,180,215,.28);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .login-box {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      color: var(--text);
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    .login-box form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .login-box input {
+      padding: 12px;
+      border: 1px solid rgba(168,85,247,.35);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .login-box input:focus {
+      outline: none;
+      border-color: var(--violet-500);
+      box-shadow: 0 0 0 3px color-mix(in oklab, var(--violet-500) 35%, transparent);
+    }
+
+    .login-box button {
+      padding: 12px;
+      background: linear-gradient(135deg, var(--violet-700), var(--violet-500));
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .login-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(124,58,237,.3);
+    }
+
+    .error {
+      color: #fecaca;
+      background: rgba(239,68,68,.15);
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(239,68,68,.4);
+      margin-top: 10px;
+    }
+
+    .success {
+      color: #86efac;
+      background: rgba(34,197,94,.15);
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(34,197,94,.4);
+      margin-top: 10px;
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .admin-header h1 {
+      color: var(--violet-400);
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-icon {
+      padding: 10px 16px;
+      background: rgba(124,58,237,.12);
+      border: 1px solid rgba(168,85,247,.35);
+      color: var(--text);
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .2s ease;
+    }
+
+    .btn-icon:hover {
+      background: rgba(124,58,237,.2);
+      border-color: var(--violet-500);
+    }
+
+    .bookings-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .booking-card {
+      background: rgba(124,58,237,.04);
+      border: 1px solid rgba(168,85,247,.22);
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .booking-info {
+      flex: 1;
+    }
+
+    .booking-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .booking-details {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: grid;
+      gap: 4px;
+    }
+
+    .booking-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-small {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all .2s ease;
+    }
+
+    .btn-delete {
+      background: rgba(239,68,68,.15);
+      color: #fecaca;
+      border: 1px solid rgba(239,68,68,.4);
+    }
+
+    .btn-delete:hover {
+      background: rgba(239,68,68,.25);
+    }
+
+    .filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .filters input,
+    .filters select {
+      padding: 8px 12px;
+      border: 1px solid rgba(168,85,247,.35);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+      border-radius: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 16px;
+      background: rgba(124,58,237,.12);
+      border: 1px solid rgba(168,85,247,.35);
+      color: var(--text);
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .2s ease;
+    }
+
+    .filter-btn:hover {
+      background: rgba(124,58,237,.2);
+      border-color: var(--violet-500);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar topbar--glow" role="banner">
+    <div class="brand">
+      <div class="logo">
+        <img src="img/logo.png" alt="YahirCutz Logo" style="width: 50px; height: auto;">
+      </div>
+      <div class="brand-copy">
+        <h1 class="brand-title">YahirCutz</h1>
+        <p class="brand-sub">Panel Admin</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <!-- Login Section -->
+    <div id="login-section" class="section" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+      <div class="login-box">
+        <h1>🔐 Panel Admin</h1>
+        <form id="login-form">
+          <input type="password" id="admin-password" placeholder="Contraseña de admin" required>
+          <button type="submit">Acceder</button>
+        </form>
+        <p id="login-error" class="error hidden"></p>
+      </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" class="hidden">
+      <div class="section">
+        <div class="admin-header">
+          <h1>📅 Panel de Reservas</h1>
+          <div class="header-actions">
+            <button id="refresh-btn" class="btn-icon">🔄 Actualizar</button>
+            <button id="logout-btn" class="btn-icon">🚪 Salir</button>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+          <input type="date" id="filter-date" placeholder="Filtrar por fecha">
+          <select id="filter-status">
+            <option value="">Todas las citas</option>
+            <option value="confirmed">✅ Confirmadas</option>
+            <option value="cancelled">❌ Canceladas</option>
+          </select>
+          <button id="clear-filters" class="filter-btn">Limpiar Filtros</button>
+        </div>
+
+        <!-- Bookings List -->
+        <div id="bookings-list" class="bookings-list">
+          <!-- Se llena dinámicamente -->
+        </div>
+        <p id="no-bookings" class="muted" style="text-align: center; padding: 40px 20px;">No hay reservas</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = 'admin123'; // Cambiar en producción
+    const BOOKINGS_FILE = '/api/data/bookings.json';
+
+    let allBookings = {};
+
+    // Login
+    document.getElementById('login-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const password = document.getElementById('admin-password').value;
+      
+      if (password === ADMIN_PASSWORD) {
+        document.getElementById('login-section').classList.add('hidden');
+        document.getElementById('dashboard-section').classList.remove('hidden');
+        loadBookings();
+      } else {
+        const error = document.getElementById('login-error');
+        error.textContent = 'Contraseña incorrecta';
+        error.classList.remove('hidden');
+      }
+    });
+
+    // Logout
+    document.getElementById('logout-btn')?.addEventListener('click', () => {
+      document.getElementById('dashboard-section').classList.add('hidden');
+      document.getElementById('login-section').classList.remove('hidden');
+      document.getElementById('admin-password').value = '';
+      allBookings = {};
+    });
+
+    // Refresh
+    document.getElementById('refresh-btn')?.addEventListener('click', loadBookings);
+
+    // Load bookings
+    async function loadBookings() {
+      try {
+        const res = await fetch(BOOKINGS_FILE);
+        if (res.ok) {
+          allBookings = await res.json();
+          renderBookings();
+        }
+      } catch (err) {
+        console.error('Error loading bookings:', err);
+      }
+    }
+
+    // Render bookings
+    function renderBookings() {
+      const container = document.getElementById('bookings-list');
+      const noBookings = document.getElementById('no-bookings');
+      const dateFilter = document.getElementById('filter-date').value;
+      const statusFilter = document.getElementById('filter-status').value;
+
+      container.innerHTML = '';
+      let count = 0;
+
+      for (const [date, bookings] of Object.entries(allBookings)) {
+        if (dateFilter && date !== dateFilter) continue;
+
+        bookings.forEach((booking, idx) => {
+          if (statusFilter && booking.status !== statusFilter) return;
+
+          const card = document.createElement('div');
+          card.className = 'booking-card';
+          card.innerHTML = `
+            <div class="booking-info">
+              <div class="booking-name">${booking.name}</div>
+              <div class="booking-details">
+                <div><strong>Servicio:</strong> ${booking.service}</div>
+                <div><strong>Fecha:</strong> ${date}</div>
+                <div><strong>Hora:</strong> ${booking.time}</div>
+                <div><strong>Email:</strong> ${booking.email}</div>
+                <div><strong>Teléfono:</strong> ${booking.phone || '-'}</div>
+                <div><strong>Instagram:</strong> ${booking.instagram || '-'}</div>
+              </div>
+            </div>
+            <div class="booking-actions">
+              <button class="btn-small btn-delete" onclick="deleteBooking('${date}', ${idx})">Eliminar</button>
+            </div>
+          `;
+          container.appendChild(card);
+          count++;
+        });
+      }
+
+      noBookings.classList.toggle('hidden', count > 0);
+    }
+
+    // Delete booking
+    async function deleteBooking(date, index) {
+      if (!confirm('¿Estás seguro?')) return;
+
+      allBookings[date].splice(index, 1);
+      if (allBookings[date].length === 0) {
+        delete allBookings[date];
+      }
+
+      // In a real app, you'd send this to the server
+      // For now, just update the UI
+      renderBookings();
+    }
+
+    // Filters
+    document.getElementById('filter-date')?.addEventListener('change', renderBookings);
+    document.getElementById('filter-status')?.addEventListener('change', renderBookings);
+    document.getElementById('clear-filters')?.addEventListener('click', () => {
+      document.getElementById('filter-date').value = '';
+      document.getElementById('filter-status').value = '';
+      renderBookings();
+    });
+  </script>
+</body>
+</html>

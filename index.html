@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#a61e1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Yahir Cutz">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/pwa-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icons/pwa-512.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <title>Yahir Cutz — Reserva Online</title>
+  <meta name="description" content="Barbería profesional en Carolina, Puerto Rico. Reserva online, servicios premium, galería, equipo y contacto.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style2.css">  <script defer src="js/config.js"></script>  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <div id="pwa-install-banner" class="pwa-install-banner" hidden>
+    <div class="pwa-install-inner">
+      <div class="pwa-install-copy">
+        <span class="pwa-install-pill">PWA lista</span>
+        <p class="pwa-install-text">Descarga Yahir Cartoon como app y guárdala en tu pantalla de inicio.</p>
+      </div>
+      <div class="pwa-install-actions">
+        <button id="pwa-install-btn" type="button" class="btn-main">Download</button>
+        <button id="pwa-install-close" type="button" class="pwa-install-close" aria-label="Cerrar aviso">✕</button>
+      </div>
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="container header-flex">
+      <a href="#hero" class="header-logo-link">
+        <img src="img/logoyahircartoon-nobackground.png" alt="Yahir Cutz Logo" class="header-logo">
+      </a>
+      <button class="hamburger-btn" id="hamburger-toggle" type="button" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <a href="#hero">Inicio</a>
+        <a href="#experiencia">Experiencia Yahir Cutz</a>
+        <a href="#booking">Reserva Online</a>
+        <a href="#politicas">Políticas y Condiciones</a>
+        <a href="#servicios">Servicios Premium</a>
+        <a href="#galeria">Galería de Estilo</a>
+        <a href="#precios">Nuestros Precios</a>
+        <a href="#equipo">Conoce a Yahir Cutz</a>
+        <a href="#contacto">Contáctanos</a>
+        <div class="nav-footer">
+          <img src="img/logoyahircutzog.png" alt="Yahir Cutz" class="nav-footer-logo">
+          <div class="nav-footer-content">
+            <p class="nav-footer-text">Derechos reservados © 2026 Yahir Cutz</p>
+            <div class="nav-footer-socials">
+              <a href="https://www.instagram.com/yahircutz__" target="_blank" aria-label="Instagram">
+                <img src="img/logo ig.gif" alt="Instagram" style="height: 24px; width: auto;">
+              </a>
+              <a href="https://wa.me/17872131124" target="_blank" aria-label="WhatsApp">
+                <img src="img/whatsapp logo.avif" alt="WhatsApp" style="height: 24px; width: auto;">
+              </a>
+              <a href="https://www.tiktok.com/@yahircutz__" target="_blank" aria-label="TikTok">
+                <img src="img/logo tik tok.gif" alt="TikTok" style="height: 24px; width: auto;">
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero-section section">
+      <div class="container hero-flex">
+        <div class="hero-text">
+          <div class="hero-badges">
+            <button class="badge-btn badge-barber-btn" type="button">Los Magicos Barbershop</button>
+            <button class="badge-btn badge-location-btn" type="button">Carolina, PR</button>
+          </div>
+          <h1>Barbero exclusivo, experiencia premium.</h1>
+          <div class="hero-pills-row">
+            <div class="hero-pills">
+              <span class="hero-pill">Skin fades y tijera limpia</span>
+              <span class="hero-pill">Toalla caliente + navaja</span>
+              <span class="hero-pill">Reserva en 30 segundos</span>
+            </div>
+            <div class="hero-pill-photo hero-carousel">
+              <img src="img/foto1.jpg" alt="Corte limpio y barba premium" class="hero-img active">
+              <img src="img/foto%202.jpg" alt="Corte 2" class="hero-img">
+              <img src="img/foto3.jpg" alt="Corte 3" class="hero-img">
+              <img src="img/foto%204.jpg" alt="Corte 4" class="hero-img">
+              <img src="img/foto%205.jpg" alt="Corte 5" class="hero-img">
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="https://www.instagram.com/yahircutz__" target="_blank" class="btn-ghost">
+              <img src="img/logo%20ig.gif" alt="Instagram" style="height: 24px; width: auto; display: inline; vertical-align: middle; margin-right: 0.3em;">
+              Instagram
+            </a>
+            <a href="https://wa.me/17872131124?text=Hola%2C%20me%20gustar%C3%ADa%20sacar%20una%20cita%20en%20Yahir%20Cutz" target="_blank" class="btn-ghost">
+              <img src="img/logo wa.gif" alt="WhatsApp" style="height: 24px; width: auto; display: inline; vertical-align: middle; margin-right: 0.3em;">
+              WhatsApp
+            </a>
+            <a href="https://www.tiktok.com/@yahircutz__" target="_blank" class="btn-ghost">
+              <img src="img/logo tik tok.gif" alt="TikTok" style="height: 24px; width: auto; display: inline; vertical-align: middle; margin-right: 0.3em;">
+              TikTok
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number">100+</span>
+              <span class="hero-stat-label">Clientes satisfechos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">3+</span>
+              <span class="hero-stat-label">Años de experiencia</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">⭐⭐⭐⭐+</span>
+              <span class="hero-stat-label">5/5 Reviews</span>
+            </div>
+            <div class="hero-stat reserve-cta" style="background: var(--accent); display: flex; align-items: center; justify-content: center;">
+              <a href="#booking" class="hero-stat-link" style="color: #ffffff; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <span class="hero-stat-label" style="color: #ffffff; font-size: 1.1rem; font-weight: 700; text-align: center;">Reservar ahora</span>
+              </a>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <span class="scroll-text">Desliza hacia abajo</span>
+            <div class="scroll-arrows">
+              <span class="arrow">↓</span>
+              <span class="arrow">↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCIA / BENEFICIOS -->
+    <section id="experiencia" class="experiencia-section section">
+      <div class="container">
+        <h2>Experiencia Yahir Cutz</h2>
+        <p class="section-lead">Servicio premium de inicio a fin: técnica, ambiente y detalles pensados para ti.</p>
+        <div class="exp-grid">
+          <article class="exp-card">
+            <div class="exp-icon">✨</div>
+            <p class="exp-kicker">Skin fades y tijera limpia</p>
+            <h3>Fades/Blowout/Cerquillo</h3>
+            <p class="exp-copy">Fades impecables, líneas definidas y peinados en seco con estilo para fotos o videos.</p>
+            <div class="exp-meta"><span>✓ Corte personalizado</span><span>→ Reserva tu cita</span></div>
+          </article>
+          <article class="exp-card">
+            <div class="exp-icon">🪮</div>
+            <p class="exp-kicker">Barba perfilada + toalla</p>
+            <h3>Corte de barba</h3>
+            <p class="exp-copy">Toalla caliente, vapor, aceites y navaja para contorno nítido y piel cuidada.</p>
+            <div class="exp-meta"><span>✓ Ritual premium</span><span>→ Consulta disponibilidad</span></div>
+          </article>
+          <article class="exp-card">
+            <div class="exp-icon">📅</div>
+            <p class="exp-kicker">Reserva online sin espera</p>
+            <h3>Llega y siéntate</h3>
+            <p class="exp-copy">Agenda en segundos, recordatorio automático y bloqueos para que tu turno no se mueva.</p>
+            <div class="exp-meta"><span>Notificaciones</span><span>Pagos ATH/efectivo</span></div>
+          </article>
+          <article class="exp-card">
+            <div class="exp-icon">⭐</div>
+            <p class="exp-kicker">Detalles que elevan</p>
+            <h3>Ambiente y cuidado</h3>
+            <p class="exp-copy">Bebida de cortesía, música curada, higiene estricta y productos pro en cada servicio.</p>
+            <div class="exp-meta"><span>Whiskey / café</span><span>Higiene pro</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVA ONLINE (CALENDARIO + HORAS + FORM + RESUMEN) -->
+    <section id="booking" class="booking-section section">
+      <div class="container">
+        <h2>Reserva Online</h2>
+        <div class="booking-instructions">
+          <h3 class="instructions-title">Cómo reservar tu cita</h3>
+          <div class="instructions-list">
+            <div class="instruction-step">
+              <span class="step-emoji">📅</span>
+              <div class="step-content">
+                <h4>Elige un día</h4>
+                <p>Selecciona tu fecha preferida en el calendario</p>
+              </div>
+            </div>
+            <div class="instruction-step">
+              <span class="step-emoji">🕐</span>
+              <div class="step-content">
+                <h4>Elige la hora</h4>
+                <p>Aparecerán las horas disponibles después de elegir fecha</p>
+              </div>
+            </div>
+            <div class="instruction-step">
+              <span class="step-emoji">✍️</span>
+              <div class="step-content">
+                <h4>Completa tus datos</h4>
+                <p>Nombre, email, teléfono, instagram y selecciona tu servicio</p>
+              </div>
+            </div>
+            <div class="instruction-step">
+              <span class="step-emoji">✅</span>
+              <div class="step-content">
+                <h4>Confirma tu reserva</h4>
+                <p>Revisa el resumen y envía tu reserva</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="booking-grid">
+          <!-- Calendario -->
+          <article class="card booking-step active" id="step-1">
+            <header class="booking-head">
+              <div>
+                <p class="muted">Paso 1</p>
+                <h3>Escoge tu fecha</h3>
+              </div>
+              <div class="month-picker" role="group" aria-label="Navegar meses">
+                <button id="prev-month" class="btn-icon" aria-label="Mes anterior">◀</button>
+                <span id="calendar-month" class="month-label" aria-live="polite"></span>
+                <button id="next-month" class="btn-icon" aria-label="Mes siguiente">▶</button>
+              </div>
+            </header>
+            <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Calendario de disponibilidad"></div>
+          </article>
+
+          <!-- Horas -->
+          <article class="card booking-step" id="step-2">
+            <header class="booking-head">
+              <div>
+                <p class="muted">Paso 2</p>
+                <h3>Elige la hora</h3>
+              </div>
+              <button id="reset-btn" type="button" class="btn-icon" aria-label="Reiniciar selección">↺</button>
+            </header>
+            <div id="time-grid" class="hours-grid" role="listbox" aria-label="Horas disponibles"></div>
+          </article>
+
+          <!-- Formulario -->
+          <article class="card booking-step" id="step-3">
+            <header class="booking-head">
+              <div>
+                <p class="muted">Paso 3</p>
+                <h3>Tus datos</h3>
+              </div>
+            </header>
+            <form id="client-form" class="form-grid" novalidate>
+              <label><span>Nombre</span><input id="clientName" name="name" placeholder="Tu nombre" autocomplete="name" required /></label>
+              <label><span>Email</span><input id="clientEmail" name="email" type="email" placeholder="tucorreo@email.com" autocomplete="email" required /></label>
+              <label><span>Teléfono</span><input id="clientPhone" name="tel" type="tel" inputmode="tel" placeholder="787-000-0000" required /></label>
+              <label><span>Instagram <small class="muted">(opcional)</small></span><input id="clientInstagram" name="instagram" type="text" placeholder="@usuario" /></label>
+              <label class="custom-select-label"><span>Servicio</span>
+                <select id="serviceId" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Corte Clásico" data-duration="30" data-price="40">Corte Clásico</option>
+                  <option value="Arreglo de Barba" data-duration="45" data-price="40">Arreglo de Barba</option>
+                  <option value="Corte para Niños" data-duration="25" data-price="30">Corte para Niños</option>
+                  <option value="Estilismo Avanzado" data-duration="60" data-price="60">Estilismo Avanzado</option>
+                  <option value="Facial" data-duration="45" data-price="50">Facial</option>
+                  <option value="Men's Toupee" data-duration="90" data-price="150">Men's Toupee</option>
+                  <option value="HouseCall" data-duration="90" data-price="100">House Call (Domicilio)</option>
+                </select>
+              </label>
+              <label id="housecall-address-label" style="display:none;"><span>🏠 Lugar del House Call</span><input id="housecallAddress" name="housecallAddress" type="text" /></label>
+              <div class="two-col">
+                <label><span>Duración Approx.</span><input id="serviceDuration" readonly /></label>
+                <label><span>Precio</span><input id="servicePrice" readonly /></label>
+              </div>
+            </form>
+          </article>
+
+          <!-- Resumen y Reservar -->
+          <article class="card booking-step" id="step-4">
+            <header class="booking-head">
+              <div>
+                <p class="muted">Paso 4</p>
+                <h3>Confirmar tu cita</h3>
+              </div>
+            </header>
+            <div id="summary-container" class="summary-container" aria-live="polite" role="region" aria-label="Resumen de tu reserva">
+              <div class="summary-placeholder">📋 Selecciona día, hora y servicio para ver el resumen aquí...</div>
+            </div>
+            <div class="booking-actions">
+              <label class="consent-row"><input type="checkbox" id="optIn" /> Acepto recibir la confirmación por email.</label>
+              <button id="reserve-btn" class="btn-main" disabled>Reservar Ahora</button>
+            </div>
+            <div id="success-message" class="success-message"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLÍTICAS Y CONDICIONES -->
+    <section id="politicas" class="politicas-section section">
+      <div class="container">
+        <h2>📋 Políticas y Condiciones</h2>
+        <div class="politicas-grid">
+          <div class="politica-card">
+            <div class="politica-icon">❌</div>
+            <h3>Cancelación</h3>
+            <p>Por favor cancelar o reprogramar con al menos <strong>24 horas</strong> de anticipación. Los no-show podrían requerir prepago para futuras citas.</p>
+            <div class="politica-meta">⏰ Aviso previo necesario</div>
+          </div>
+          <div class="politica-card">
+            <div class="politica-icon">💳</div>
+            <h3>Métodos de Pago</h3>
+            <p>Aceptamos <strong>ATH Móvil</strong> y <strong>efectivo</strong>. Pregunta por opciones de pago contactless para tu seguridad.</p>
+            <div class="politica-meta">🎯 Rápido y seguro</div>
+          </div>
+          <div class="politica-card">
+            <div class="politica-icon">🧼</div>
+            <h3>Higiene y Limpieza</h3>
+            <p>Desinfección de herramientas en cada servicio, toallas limpias y área de trabajo sanitizada con estándares profesionales.</p>
+            <div class="politica-meta">✨ Ambiente limpio</div>
+          </div>
+          <div class="politica-card">
+            <div class="politica-icon">🕐</div>
+            <h3>Puntualidad</h3>
+            <p>Se agradece llegar a tiempo. Retrasos mayores a <strong>10 minutos</strong> podrían reprogramarse para respetar los turnos.</p>
+            <div class="politica-meta">⏰ Respeto del tiempo</div>
+          </div>
+          <div class="politica-card">
+            <div class="politica-icon">⭐</div>
+            <h3>Experiencia Probada</h3>
+            <p>Años de experiencia ofreciendo atención profesional, técnica de calidad y resultados consistentes en Carolina, PR.</p>
+            <div class="politica-meta">🏆 Profesionalismo garantizado</div>
+          </div>
+          <div class="politica-card">
+            <div class="politica-icon">✅</div>
+            <h3>Garantía de Satisfacción</h3>
+            <p>Si algo no quedó como esperabas, contáctanos dentro de <strong>48 horas</strong> para un ajuste sin costo.</p>
+            <div class="politica-meta">😊 Tu satisfacción primero</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS PREMIUM -->
+    <section id="servicios" class="servicios-section section">
+      <div class="container servicios-flex">
+        <h2>💎 Servicios Premium</h2>
+        <p class="servicios-lead">Experiencia personalizada con técnicas profesionales y productos de alta calidad</p>
+        <div class="servicios-list">
+          <div class="servicio-card">
+            <div class="servicio-icon">✂️</div>
+            <h3>Corte Clásico</h3>
+            <p>Estilo atemporal, técnicas tradicionales y acabado impecable.</p>
+            <span class="servicio-badge">Popular</span>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">💈</div>
+            <h3>Arreglo de Barba</h3>
+            <p>Diseño personalizado, líneas definidas y productos de alta calidad.</p>
+            <span class="servicio-badge">Premium</span>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">👦</div>
+            <h3>Corte para Niños</h3>
+            <p>Experiencia divertida y cómoda para los más pequeños.</p>
+            <span class="servicio-badge">Familia</span>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">🎨</div>
+            <h3>Estilismo Avanzado</h3>
+            <p>Looks únicos para ocasiones especiales y eventos importantes.</p>
+            <span class="servicio-badge">Exclusivo</span>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">🧴</div>
+            <h3>Tratamiento Facial</h3>
+            <p>Limpieza, nutrición y rejuvenecimiento para tu piel con productos premium.</p>
+            <span class="servicio-badge">Skincare</span>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-icon">👨</div>
+            <h3>Men's Toupee</h3>
+            <p>Tupé de alta calidad, look natural y completamente personalizado.</p>
+            <span class="servicio-badge">Especial</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE ESTILO -->
+    <section id="galeria" class="galeria-section section">
+      <div class="container">
+        <h2>Galería de Estilo</h2>
+        <div class="galeria-carousel">
+          <img src="img/foto1.jpg" alt="Foto de corte 1" class="galeria-img active">
+          <img src="img/foto%202.jpg" alt="Foto de corte 2" class="galeria-img">
+          <img src="img/foto3.jpg" alt="Foto de corte 3" class="galeria-img">
+          <img src="img/foto%204.jpg" alt="Foto de corte 4" class="galeria-img">
+          <img src="img/foto%205.jpg" alt="Foto de corte 5" class="galeria-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="precios-section section">
+      <div class="container">
+        <h2>💰 Nuestros Precios</h2>
+        <p class="precios-lead">Servicios de calidad profesional con precios accesibles</p>
+        <div class="precios-list">
+          <div class="precio-item">
+            <div class="precio-info">
+              <span class="precio-icon">💈</span>
+              <span class="precio-servicio">Corte y Barba</span>
+            </div>
+            <span class="precio-valor">$45</span>
+          </div>
+          <div class="precio-item">
+            <div class="precio-info">
+              <span class="precio-icon">🎨</span>
+              <span class="precio-servicio">Tinte/Pintado</span>
+            </div>
+            <span class="precio-valor">$45</span>
+          </div>
+          <div class="precio-item">
+            <div class="precio-info">
+              <span class="precio-icon">👦</span>
+              <span class="precio-servicio">Corte Niño</span>
+            </div>
+            <span class="precio-valor">$25</span>
+          </div>
+          <div class="precio-item">
+            <div class="precio-info">
+              <span class="precio-icon">✂️</span>
+              <span class="precio-servicio">Corte y Estilo</span>
+            </div>
+            <span class="precio-valor">$35</span>
+          </div>
+          <div class="precio-item">
+            <div class="precio-info">
+              <span class="precio-icon">💇</span>
+              <span class="precio-servicio">Afeitado de Cabeza</span>
+            </div>
+            <span class="precio-valor">$25</span>
+          </div>
+          <div class="precio-item precio-item-variable">
+            <div class="precio-info">
+              <span class="precio-icon">💧</span>
+              <span class="precio-servicio">Lavado de Pelo</span>
+            </div>
+            <span class="precio-valor precio-valor-variable">$20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONOCE A YAHIR CUTZ -->
+    <section id="equipo" class="equipo-section section">
+      <div class="container">
+        <h2>Conoce a Yahir Cutz</h2>
+        <p class="section-lead">Barbero profesional apasionado por el arte del corte y el estilo.</p>
+        <div class="yahir-grid">
+          <div class="yahir-card-main">
+            <div class="yahir-image">
+              <img src="img/logo yahir.jpg" alt="Yahir Cutz">
+            </div>
+            <div class="yahir-info">
+              <h3 class="yahir-name">Yahir Cutz</h3>
+              <p class="yahir-title">Barbero Maestro</p>
+              <p class="yahir-bio">Skin fades limpios, diseños personalizados y barbas perfiladas con toalla caliente. House calls disponibles y asesoría de imagen para que salgas listo para cualquier ocasión.</p>
+              <div class="yahir-stats">
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Clientes Satisfechos</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">3+</span>
+                  <span class="stat-label">Años Experiencia</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5/5 ⭐</span>
+                  <span class="stat-label">Calificación</span>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/yahircutz__" target="_blank" class="btn-main">Sígueme en Instagram</a>
+            </div>
+          </div>
+          <div class="yahir-highlights">
+            <h3>Especialidades</h3>
+            <ul class="highlight-list">
+              <li>✂️ Cortes clásicos y modernos</li>
+              <li>💈 Arreglos y diseños de barba</li>
+              <li>💇 Tratamientos faciales</li>
+              <li>🎨 Asesoramiento de estilo</li>
+              <li>🏠 House Calls disponibles</li>
+            </ul>
+            <div class="logo-container" style="margin-top: 2rem;">
+              <img src="img/logoyahircartoon.png" alt="Logo Yahir Cutz" class="logo-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO Y HORARIOS -->
+    <section id="contacto" class="contacto-section section">
+      <div class="container">
+        <h2>Contácto</h2>
+        <p class="section-lead">Llama, envía un email o visíta. Estoy listos para atenderte.</p>
+        <div class="contacto-grid">
+          <div class="contacto-card">
+            <div class="contacto-icon">📍</div>
+            <h3>Dirección</h3>
+            <p>Carolina, Puerto Rico</p>
+          </div>
+          <div class="contacto-card">
+            <div class="contacto-icon">📞</div>
+            <h3>Teléfono</h3>
+            <p><a href="tel:+17872131124">+1 (787) 213-1124</a></p>
+          </div>
+          <div class="contacto-card">
+            <div class="contacto-icon">✉️</div>
+            <h3>Email</h3>
+            <p><a href="mailto:info@yahircutz.com">info@yahircutz.com</a></p>
+          </div>
+          <div class="contacto-card">
+            <div class="contacto-icon">🕐</div>
+            <h3>Horarios</h3>
+            <ul class="horarios-list">
+              <li>Lunes: Cerrado</li>
+              <li>Martes - Sábado: 8:00 AM - 7:00 PM</li>
+              <li>Domingo: Cerrado</li>
+            </ul>
+          </div>
+          <div class="contacto-card">
+            <div class="contacto-icon">🏠</div>
+            <h3>House Call</h3>
+            <p>Disponible 24/7 para brindarte servicio a domicilio</p>
+          </div>
+        </div>
+        
+        <!-- Mapa de Ubicación -->
+        <div class="mapa-section">
+          <div class="mapa-header">
+            <div class="mapa-icon">📍</div>
+            <h3 class="mapa-title">Encuéntrame en Los Mágicos Barbershop</h3>
+            <p class="mapa-subtitle">Carolina, Puerto Rico</p>
+          </div>
+          
+          <div class="mapa-content">
+            <div class="mapa-card">
+              <div class="mapa-wrapper">
+                <iframe 
+                  src="https://www.google.com/maps?q=18.401222,-65.978&hl=es&z=16&output=embed" 
+                  width="100%" 
+                  height="450" 
+                  style="border:0; border-radius: 16px;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Los Mágicos Barbershop - Carolina, PR">
+                </iframe>
+              </div>
+              
+              <div class="mapa-info-grid">
+                <div class="mapa-info-item">
+                  <div class="info-icon">🗺️</div>
+                  <div class="info-content">
+                    <h4>Ubicación</h4>
+                    <p>Los Mágicos Barbershop<br>Carolina, PR 00979</p>
+                  </div>
+                </div>
+                
+                <div class="mapa-info-item">
+                  <div class="info-icon">🚗</div>
+                  <div class="info-content">
+                    <h4>Cómo llegar</h4>
+                    <p>Misma calle de Plaza Carolina<br>Estacionamiento disponible • Fácil acceso</p>
+                  </div>
+                </div>
+                
+                <div class="mapa-info-item">
+                  <div class="info-icon">⏰</div>
+                  <div class="info-content">
+                    <h4>Horario</h4>
+                    <p>Martes - Sábado<br>8:00 AM - 7:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mapa-actions">
+                <a href="https://www.google.com/maps?q=18.401222,-65.978" target="_blank" class="btn-main btn-map">
+                  <span>📍</span> Abrir en Google Maps
+                </a>
+                <a href="https://wa.me/17872131124?text=Hola%2C%20necesito%20direcciones%20a%20Los%20M%C3%A1gicos%20Barbershop" target="_blank" class="btn-main btn-map-secondary">
+                  <img src="img/logo wa.gif" alt="WhatsApp" style="height: 20px; width: auto; display: inline; vertical-align: middle; margin-right: 0.5em;">
+                  Pedir Direcciones por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Logo y Descripción -->
+        <div class="footer-section footer-branding">
+          <img src="img/logoyahircutzog.png" alt="Yahir Cutz" class="footer-logo promo-bounce">
+          <p class="footer-description">Yahir Cutz — Barbero profesional en Carolina, PR. Especialista en skin fades, diseños de barba y asesoría de estilo. Experiencia premium y atención personalizada.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/yahircutz__" target="_blank" class="social-link" aria-label="Instagram">
+              <img src="img/logo ig.gif" alt="Instagram" style="height: 24px; width: auto;">
+            </a>
+            <a href="https://wa.me/17872131124" target="_blank" class="social-link" aria-label="WhatsApp">
+              <img src="img/logo wa.gif" alt="WhatsApp" style="height: 24px; width: auto;">
+            </a>
+            <a href="https://www.tiktok.com/@yahircutz" target="_blank" class="social-link" aria-label="TikTok">
+              <img src="img/logo tik tok.gif" alt="TikTok" style="height: 24px; width: auto;">
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegación Rápida -->
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#experiencia">Experiencia Yahir Cutz</a></li>
+            <li><a href="#booking">Reserva Online</a></li>
+            <li><a href="#politicas">Políticas y Condiciones</a></li>
+            <li><a href="#servicios">Servicios Premium</a></li>
+            <li><a href="#galeria">Galería de Estilo</a></li>
+            <li><a href="#precios">Nuestros Precios</a></li>
+            <li><a href="#equipo">Conoce a Yahir Cutz</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="footer-section">
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Corte Clásico</a></li>
+            <li><a href="#servicios">Arreglo de Barba</a></li>
+            <li><a href="#servicios">Estilismo Avanzado</a></li>
+            <li><a href="#servicios">House Call</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-icon">📞</span>
+              <a href="tel:+17872131124">+1 (787) 213-1124</a>
+            </li>
+            <li>
+              <span class="contact-icon">📍</span>
+              <span>Carolina, PR</span>
+            </li>
+            <li>
+              <span class="contact-icon">🕐</span>
+              <span>Martes - Sábado: 8AM-7PM</span>
+            </li>
+            <li>
+              <span class="contact-icon">🏠</span>
+              <span>House Call disponible 24/7</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="footer-brand-strip">
+            <div class="brand-item">
+              <span class="brand-icon">✂️</span>
+              <span class="brand-text">Los Mágicos Barbershop</span>
+            </div>
+            <div class="brand-divider">|</div>
+            <div class="brand-item">
+              <span class="brand-icon">💎</span>
+              <span class="brand-text">Experiencia Premium</span>
+            </div>
+            <div class="brand-divider">|</div>
+            <div class="brand-item">
+              <span class="brand-icon">📍</span>
+              <span class="brand-text">Carolina, PR</span>
+            </div>
+          </div>
+          
+          <div class="footer-divider"></div>
+          
+          <div class="footer-bottom-flex">
+            <div class="footer-copyright">
+              <span class="copyright-icon">©</span>
+              <span>2026 Yahir Cutz. Todos los derechos reservados.</span>
+            </div>
+            <div class="footer-bottom-links">
+              <a href="#politicas" class="footer-link">
+                <span class="link-icon">📜</span>
+                Políticas de Privacidad
+              </a>
+              <span class="separator">•</span>
+              <a href="#politicas" class="footer-link">
+                <span class="link-icon">⚖️</span>
+                Términos de Servicio
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-signature">
+            <div class="highcloud-credit">
+              <p>Developed by</p>
+              <img src="https://www.highcloud8.com/img/highcloud8.png" alt="High Cloud 8" class="highcloud-logo">
+              <span class="highcloud-text">High Cloud 8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
